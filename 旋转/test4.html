@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 定义运行次数
+        var a = 1;
+
+
+        // 定时器 setInterval(需要定时运行的代码,时间) 常用于轮播图以及定时切换的游戏
+
+        var sI = setInterval(function () {
+            if (a == 5) {
+                // clearInterval() 是清除计时器
+                clearInterval(sI);
+            }
+
+            alert("今天中午吃啥子?罗非罗非罗非鱼!" + a);
+
+            a++;
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
