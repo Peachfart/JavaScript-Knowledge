@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="抽奖.css">
+</head>
+
+<body>
+    <div id="bg">
+        <img src="./pointer.png" alt="" id="pointer">
+        <img src="./turntable.png" alt="" id="turntable" onclick="xuanzhuan()">
+    </div>
+</body>
+<script>
+    var pointer = document.getElementById("pointer");
+    var turntable = document.getElementById("turntable");
+
+    // 计算每个区域块的角度
+    var deg = 51.4;
+    function xuanzhuan() {
+        clearInterval(timer);
+        var timer = setInterval(function xz() {
+            // 随机旋转角度
+            var i = Math.floor(Math.random() * 7 + 1) * deg - deg / 2;
+            // 定义转盘必须转三圈
+            // 定义总体旋转的角度
+            var rdm = 3 * 360 + i;
+            turntable.style.transform = "rotate(" + rdm + "deg)";
+            clearInterval(timer);
+
+            // setTimeout 作用是将内部的代码延时运行,需要在小括号中写入两个参数,
+            // 第一个参数:函数块
+            // 第二个参数:延时
+            setTimeout(() => {
+                // 计算抽奖抽中的奖品
+                if (i < deg) {
+                    alert("恭喜获得一等奖!");
+                } else if (i > deg && i < deg * 2) {
+                    alert("恭喜获得二等奖!");
+                } else if (i > deg * 2 && i < deg * 3) {
+                    alert("恭喜获得三等奖!");
+                } else if (i > deg * 3 && i < deg * 4) {
+                    alert("恭喜获得四等奖!");
+                } else if (i > deg * 4 && i < deg * 5) {
+                    alert("恭喜获得五等奖!");
+                } else if (i > deg * 5 && i < deg * 6) {
+                    alert("恭喜获得六等奖!");
+                } else if (i > deg * 6 && i < deg * 7) {
+                    alert("未中奖");
+                }
+            }, 4000);
+        }, 30);
+    }
+
+</script>
+
+</html>
