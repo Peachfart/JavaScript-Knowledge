@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<img src="https://images.pexels.com/photos/1025469/pexels-photo-1025469.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    id="image">
+
+<body>
+
+</body>
+<script>
+    // document.write() 作用是添加内容到标签
+    // 产生随机数的方法
+    // Math.random() 这个方法可以随机生成0-1之间的小数
+
+    // Math.floor()向下取整
+
+    var a = "https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+    var b = "https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+    var c = "https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+    var d = "https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+    var e = "https://images.pexels.com/photos/620337/pexels-photo-620337.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+    var f = "https://images.pexels.com/photos/1619319/pexels-photo-1619319.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+    var g = "https://images.pexels.com/photos/210307/pexels-photo-210307.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+
+    var s = [a, b, c, d, e, f, g];
+
+    setInterval(function () {
+        var i = Math.floor(Math.random() * 7);
+        var image = document.getElementById("image");
+        image.src = s[i];
+    }, 2000);
+
+    // 结合定时器,将图片按每两秒的时间放到页面中,保证每次图片都是随机的
+</script>
+
+</html>
