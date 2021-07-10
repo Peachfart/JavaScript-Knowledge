@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- div 标签相当于一个容器,可以容纳其他标签,常用于页面排版,规划或美化页面,可用于添加点击事件 
+    点击事件:当用户按下或点击某个控件,会启动相应当代码
+    onclick 是点击事件调用方法
+    -->
+    <div id="img1" onclick="tihuan()">
+        <img src="./jiaqi.png" alt="jiaqi" id="img2" width="200px">
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #img1 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            bottom: 50%;
+            right: 50%;
+            left: 50%;
+            padding: 0 auto;
+        }
+    </style>
+</body>
+<script>
+    // 替换方法
+    function tihuan() {
+        document.getElementById("img2").src = "./hero.png";
+    }
+</script>
+
+</html>
