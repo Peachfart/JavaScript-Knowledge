@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #chongzhi {
+            text-align: center;
+        }
+    </style>
+</head>
+<div id="chongzhi" onclick="chongzhi()">
+    充值窗口
+</div>
+
+<body>
+
+</body>
+<script>
+    function chongzhi() {
+        // 警示窗,可以在()括号中添加提示流
+        alert("想你了,我的宝");
+
+        // 带有输入框的警示窗,可以在()中添加提示内容,用户输入的内容可以用变量接收
+        var money = prompt("请输入充值金额:");
+        alert("用户输入的金额是:" + money);
+
+        // 带确定和取消的警示窗,可以在()中添加提示内容,用户选择或确定或者取消都可以获取得到
+        // 用变量接受
+        var a = confirm("亲爱的VIP用户,请问需要继续充值码?");
+        if (a == true) {
+            alert("我的宝,请继续充值!");
+            money();
+        } else {
+            alert("欢迎下次来玩!")
+        }
+    }
+
+</script>
+
+</html>
