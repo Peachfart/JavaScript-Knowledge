@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onclick="wslzr()" style="text-align: center;">点击老丈人会话</div>
+</body>
+<script>
+    // 目前你的角色是老丈人
+    // 你要求女婿出钱20万彩礼能娶走你的女儿
+    // 使用三种警示窗,输出1.有车吗?2.有房吗?3.你可以出多少彩礼
+    // 其中只要又一个没有或者彩礼礼金低于20万,那么就不在弹出窗口
+    // 或者到第三步后,如果女婿没有20万,弹出警示框说:木有20万,想娶走我女儿?么门!
+
+    function wslzr() {
+        // 警示窗,可以在()括号中添加提示流
+        var ky = confirm("想娶走我女儿,得通过我的考验!");
+        if (ky == true) {
+            var a = prompt("有车吗?");
+            if (a == "有") {
+                var b = prompt("有房吗?")
+                if (b == "有") {
+                    var c = prompt("你出多少彩礼?:");
+                    if (c >= 20) {
+                        alert("你的条件可以有")
+                    } else {
+                        alert("你的条件不行")
+                    }
+                } else {
+                    alert("你的条件不行")
+                }
+            } else {
+                alert("你的条件不行")
+            }
+        } else {
+            alert("你去下一家吧!")
+        }
+
+    }
+
+</script>
+
+</html>
