@@ -12,14 +12,15 @@
 
 <body>
     <div id="bg">
-        <img src="./pointer.png" alt="" id="pointer">
-        <img src="./turntable.png" alt="" id="turntable" onclick="xuanzhuan()">
+        <img src="./pointer.png" alt="" id="pointer" onclick="xuanzhuan()">
+        <img src="./turntable.png" alt="" id="turntable">
+        <video src="./mood.mp3" id="bgMusic"></video>
     </div>
 </body>
 <script>
     var pointer = document.getElementById("pointer");
     var turntable = document.getElementById("turntable");
-
+    var bgMusic = document.getElementById("bgMusic");
     // 计算每个区域块的角度
     var deg = 51.4;
     function xuanzhuan() {
@@ -39,6 +40,7 @@
             setTimeout(() => {
                 // 计算抽奖抽中的奖品
                 if (i < deg) {
+                    bgMusic.play();
                     alert("恭喜获得一等奖!");
                 } else if (i > deg && i < deg * 2) {
                     alert("恭喜获得二等奖!");
@@ -53,10 +55,10 @@
                 } else if (i > deg * 6 && i < deg * 7) {
                     alert("未中奖");
                 }
+                location.reload();
             }, 4000);
         }, 30);
     }
-
 </script>
 
 </html>
